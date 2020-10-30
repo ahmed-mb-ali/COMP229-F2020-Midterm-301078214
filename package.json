@@ -1,5 +1,5 @@
 {
-  "name": "comp229-f2020-midterm",
+  "name": "comp229-f2020-midterm-301078214",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -45,15 +45,17 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/ahmed-mb-ali/comp229-midterm.git"
   },
   "keywords": [
     "NodeJS",
     "ExpressJS",
     "EJS"
   ],
-  "author": "Your Name Goes Here",
+  "author": "Ahmed Ali",
   "license": "ISC",
-  "bugs": {},
-  "homepage": ""
+  "bugs": {
+    "url": "https://github.com/ahmed-mb-ali/comp229-midterm/issues"
+  },
+  "homepage": "https://github.com/ahmed-mb-ali/comp229-midterm#readme"
 }
