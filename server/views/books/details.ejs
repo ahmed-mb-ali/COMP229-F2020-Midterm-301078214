@@ -1,0 +1,74 @@
+<% include ../partials/header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <h1><%= title %></h1>
+
+
+            <!-- Here I added If statement. If the user clicked in Edit it will show -->
+            <!-- with value, so the user can edit else it will show the new book page-->
+
+            <form class="form" method="post">
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" 
+                id="title"
+                placeholder="Book Name"
+                name="title"
+                <% if (title == "Edit Book"){ %> value ="<%=book.title%>"  
+                <% } else { %> }                                           
+                  required>
+                <% } %>
+              </div>
+
+              <div class="form-group">
+                <label for="price">Price</label>
+                <input type="text" class="form-control" 
+                id="price"
+                placeholder="Book Price"
+                name="price"
+                <% if (title == "Edit Book"){ %> value ="<%=book.price%>"  
+                  <% } else {%>}                                           
+                  required>
+                <% } %>
+              </div>
+
+
+              <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" class="form-control"
+                id="author"
+                placeholder="Book Author"
+                name="author" 
+                <% if (title == "Edit Book"){ %> value ="<%=book.author%>"    
+                  <% } else {%>}                                              
+                  required>
+                <% } %>
+                
+              </div>
+
+              <div class="form-group">
+                <label for="genre">Genre</label>
+                <input type="text" class="form-control"
+                id="genre"
+                placeholder="Book Genre"
+                name="genre" 
+                <% if (title == "Edit Book"){ %> value ="<%=book.genre%>"   
+                  <% } else {%>}                                            
+                  required>
+                <% } %>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                <i class="fa fa-check-square-o"></i> Submit</button>
+
+              <a href="/books" class="btn btn-warning">     <!-- Here I fixed the href for cancel button-->
+                <i class="fa fa-undo"></i> Cancel</a> 
+            </form>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/footer.ejs %>
